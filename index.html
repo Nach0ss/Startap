@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Резюме | Ліщук Андрій</title>
+    
+    <style>
+        body {
+            text-align: center; 
+            max-width: 800px;   
+            margin: 0 auto;     
+            padding: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            transition: background-color 0.4s, color 0.4s; 
+        }
+        
+        ul {
+            display: inline-block; 
+            text-align: left;      
+        }
+
+        h1, h2, h3 {
+            color: #333;
+            transition: color 0.4s;
+        }
+
+        .theme-switch-wrapper {
+            display: flex;
+            align-items: center;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 100;
+        }
+
+        .theme-switch {
+            display: inline-block;
+            height: 24px;
+            position: relative;
+            width: 50px;
+            margin-right: 10px;
+        }
+
+        .theme-switch input { display: none; }
+
+        .slider {
+            background-color: #ccc;
+            bottom: 0;
+            cursor: pointer;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transition: .4s;
+            border-radius: 34px;
+        }
+
+        .slider:before {
+            background-color: #fff;
+            bottom: 4px;
+            content: "";
+            height: 16px;
+            left: 4px;
+            position: absolute;
+            transition: .4s;
+            width: 16px;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider { background-color: #66bb6a; }
+        input:checked + .slider:before { transform: translateX(26px); }
+
+        body.dark-theme {
+            background-color: #1a1a1a;
+            color: #f0f0f0;
+        }
+
+        body.dark-theme h1, 
+        body.dark-theme h2, 
+        body.dark-theme h3 {
+            color: #ffffff;
+        }
+
+        body.dark-theme a {
+            color: #4db8ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider"></div>
+        </label>
+        <span>Темна тема</span>
+    </div>
+
+    <header>
+        <nav>
+            <a href="./pages/about.html">about</a>
+            <a href="./pages/contact.html">contact</a>
+            <a href="./pages/gallery.html">gallery</a>
+        </nav>
+    </header>
+    
+    <h1 id="title">Моє резюме</h1>
+    <button id="mybtn">Натисни мене!</button>
+    <br><br>
+
+    <img src="./img/my-avatar.png" alt="Засновник BitStream" width="250">
+
+    <h2>Ліщук Андрій</h2>
+    <p>Учень 10-Г класу</p>
+
+    <h3>Контакти</h3>
+    <ul>
+        <li>Пошта: <a href="mailto:andreyjob444@gmail.com">andreyjob444@gmail.com</a></li>
+        <li>Телефон: <a href="tel:+380972093173">+380 97 209 31 73</a></li>
+    </ul>
+
+    <h3>Моє хобі</h3>
+    <p>
+        Моє головне захоплення — <strong>графічний дизайн</strong>. Мені подобається створювати візуальний контент...
+    </p>
+    <ul class="skills-list">
+        <li><img src="./img/monitor.svg" alt="icon"> <span>Розробкою логотипів та фірмового стилю;</span></li>
+        <li><img src="./img/poshta.svg" alt="icon"> <span>Створенням макетів для соціальних мереж;</span></li>
+        <li><img src="./img/phone.svg" alt="icon"> <span>Вивченням сучасних інструментів комп'ютерної графіки.</span></li>
+    </ul>
+   
+    <section>
+        <h3>Мій плейлист</h3>
+        <audio src="media/30_Black_Knife_DELTARUNE_Chapter_3+4_Soundtrack_Toby_Fox.mp3" controls loop></audio>
+    </section>
+    
+    <section>
+        <h3>Моє відео</h3>
+        <video src="media/Z01Tsgwe2dQ_720p.mp4" width="500" poster="images/poster.jpg" controls muted>
+            Ваш браузер не підтримує елемент відео.
+        </video>
+    </section>
+
+    <section>
+        <h3>Моє відео з YouTube</h3>
+        <iframe width="500" height="280" src="https://www.youtube.com/embed/Vr4IYjeplJA?si=18dXA21VgtNZFKJ4" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+    </section>
+
+    <script src="script.js"></script>   
+</body> 
+</html>
