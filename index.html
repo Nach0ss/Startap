@@ -2,149 +2,250 @@
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <title>Резюме | Ліщук Андрій</title>
-    
-    <style>
-        body {
-            text-align: center; 
-            max-width: 800px;   
-            margin: 0 auto;     
-            padding: 20px;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            transition: background-color 0.4s, color 0.4s; 
-        }
-        
-        ul {
-            display: inline-block; 
-            text-align: left;      
-        }
-
-        h1, h2, h3 {
-            color: #333;
-            transition: color 0.4s;
-        }
-
-        .theme-switch-wrapper {
-            display: flex;
-            align-items: center;
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 100;
-        }
-
-        .theme-switch {
-            display: inline-block;
-            height: 24px;
-            position: relative;
-            width: 50px;
-            margin-right: 10px;
-        }
-
-        .theme-switch input { display: none; }
-
-        .slider {
-            background-color: #ccc;
-            bottom: 0;
-            cursor: pointer;
-            left: 0;
-            position: absolute;
-            right: 0;
-            top: 0;
-            transition: .4s;
-            border-radius: 34px;
-        }
-
-        .slider:before {
-            background-color: #fff;
-            bottom: 4px;
-            content: "";
-            height: 16px;
-            left: 4px;
-            position: absolute;
-            transition: .4s;
-            width: 16px;
-            border-radius: 50%;
-        }
-
-        input:checked + .slider { background-color: #66bb6a; }
-        input:checked + .slider:before { transform: translateX(26px); }
-
-        body.dark-theme {
-            background-color: #1a1a1a;
-            color: #f0f0f0;
-        }
-
-        body.dark-theme h1, 
-        body.dark-theme h2, 
-        body.dark-theme h3 {
-            color: #ffffff;
-        }
-
-        body.dark-theme a {
-            color: #4db8ff;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BitStream | Official</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="theme-switch-wrapper">
-        <label class="theme-switch" for="checkbox">
-            <input type="checkbox" id="checkbox" />
-            <div class="slider"></div>
-        </label>
-        <span>Темна тема</span>
+
+    <div class="header-logo">
+        <img src="img/біток-removebg-preview.png" alt="Logo">
+        <span>BitStream</span>
     </div>
 
-    <header>
-        <nav>
-            <a href="./pages/about.html">about</a>
-            <a href="./pages/contact.html">contact</a>
-            <a href="./pages/gallery.html">gallery</a>
-        </nav>
-    </header>
-    
-    <h1 id="title">Моє резюме</h1>
-    <button id="mybtn">Натисни мене!</button>
-    <br><br>
+    <h1>BITSTREAM</h1>
+    <p>Зручний моніторинг криптовалют у реальному часі.</p>
 
-    <img src="./img/my-avatar.png" alt="Засновник BitStream" width="250">
+<div class="stats-panel">
+    <div class="stat-card">
+        <div class="stat-header">Market Cap <span class="arrow">›</span></div>
+        <div class="stat-value">$2.65T <span class="stat-up">▲ 1.87%</span></div>
+        <div class="chart-container">
+            <canvas id="marketChart"></canvas>
+        </div>
+    </div>
 
-    <h2>Ліщук Андрій</h2>
-    <p>Учень 10-Г класу</p>
+    <div class="stat-card">
+        <div class="stat-header">CMC20 <span class="arrow">›</span></div>
+        <div class="stat-value">$161.62 <span class="stat-up">▲ 2.1%</span></div>
+        <div class="chart-container">
+            <canvas id="cmcChart"></canvas>
+        </div>
+    </div>
 
-    <h3>Контакти</h3>
-    <ul>
-        <li>Пошта: <a href="mailto:andreyjob444@gmail.com">andreyjob444@gmail.com</a></li>
-        <li>Телефон: <a href="tel:+380972093173">+380 97 209 31 73</a></li>
-    </ul>
+    <div class="stat-card">
+        <div class="stat-header">Fear & Greed <span class="arrow">›</span></div>
+        <div class="fear-greed-container">
+            <div class="gauge"></div>
+            <div class="fear-value">47</div>
+            <div class="fear-label">Neutral</div>
+        </div>
+    </div>
 
-    <h3>Моє хобі</h3>
-    <p>
-        Моє головне захоплення — <strong>графічний дизайн</strong>. Мені подобається створювати візуальний контент...
-    </p>
-    <ul class="skills-list">
-        <li><img src="./img/monitor.svg" alt="icon"> <span>Розробкою логотипів та фірмового стилю;</span></li>
-        <li><img src="./img/poshta.svg" alt="icon"> <span>Створенням макетів для соціальних мереж;</span></li>
-        <li><img src="./img/phone.svg" alt="icon"> <span>Вивченням сучасних інструментів комп'ютерної графіки.</span></li>
-    </ul>
-   
-    <section>
-        <h3>Мій плейлист</h3>
-        <audio src="media/30_Black_Knife_DELTARUNE_Chapter_3+4_Soundtrack_Toby_Fox.mp3" controls loop></audio>
-    </section>
-    
-    <section>
-        <h3>Моє відео</h3>
-        <video src="media/Z01Tsgwe2dQ_720p.mp4" width="500" poster="images/poster.jpg" controls muted>
-            Ваш браузер не підтримує елемент відео.
-        </video>
-    </section>
+    <div class="stat-card">
+        <div class="stat-header">Altcoin Season <span class="arrow">›</span></div>
+        <div class="alt-season-value">43 <span>/ 100</span></div>
+        <div class="alt-season-bar">
+            <div class="bar-progress"></div>
+            <div class="bar-dot"></div>
+        </div>
+        <div class="bar-labels"><span>Bitcoin</span><span>Altcoin</span></div>
+    </div>
+</div>
 
-    <section>
-        <h3>Моє відео з YouTube</h3>
-        <iframe width="500" height="280" src="https://www.youtube.com/embed/Vr4IYjeplJA?si=18dXA21VgtNZFKJ4" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-    </section>
+<div class="main-layout">
+    <div class="crypto-container">
+        <div class="coin-row">
+            <span class="star">★</span>
+            <img src="https://assets.coingecko.com/coins/images/1/small/bitcoin.png" alt="BTC" class="coin-icon">
+            <div class="coin-name"><strong>Bitcoin</strong> <span class="ticker">BTC</span></div>
+            <a href="https://www.binance.com/uk-UA/trade/BTC_USDT" target="_blank">
+                <button class="buy-btn">Покупка</button>
+            </a>
+            <span id="btc-price" class="price-val">Завантаження...</span>
+            <span id="btc-change" class="percent-val">0.00%</span>
+        </div>
 
-    <script src="script.js"></script>   
-</body> 
+        <div class="coin-row">
+            <span class="star">★</span>
+            <img src="https://assets.coingecko.com/coins/images/279/small/ethereum.png" alt="ETH" class="coin-icon">
+            <div class="coin-name"><strong>Ethereum</strong> <span class="ticker">ETH</span></div>
+            <a href="https://www.binance.com/uk-UA/trade/ETH_USDT" target="_blank">
+                <button class="buy-btn">Покупка</button>
+            </a>
+            <span id="eth-price" class="price-val">Завантаження...</span>
+            <span id="eth-change" class="percent-val">0.00%</span>
+        </div>
+
+        <div class="coin-row">
+            <span class="star">★</span>
+            <img src="https://assets.coingecko.com/coins/images/4128/small/solana.png" alt="SOL" class="coin-icon">
+            <div class="coin-name"><strong>Solana</strong> <span class="ticker">SOL</span></div>
+            <a href="https://www.binance.com/uk-UA/trade/SOL_USDT" target="_blank">
+                <button class="buy-btn">Покупка</button>
+            </a>
+            <span id="sol-price" class="price-val">Завантаження...</span>
+            <span id="sol-change" class="percent-val">0.00%</span>
+        </div>
+
+        <div class="coin-row">
+            <span class="star">★</span>
+            <img src="https://assets.coingecko.com/coins/images/17980/small/ton_symbol.png" alt="TON" class="coin-icon">
+            <div class="coin-name"><strong>Toncoin</strong> <span class="ticker">TON</span></div>
+            <a href="https://www.binance.com/uk-UA/trade/TON_USDT" target="_blank">
+                <button class="buy-btn">Покупка</button>
+            </a>
+            <span id="ton-price" class="price-val">Завантаження...</span>
+            <span id="ton-change" class="percent-val">0.00%</span>
+        </div>
+
+        <div class="coin-row">
+            <span class="star">★</span>
+            <img src="https://assets.coingecko.com/coins/images/1094/small/tron.png" alt="TRX" class="coin-icon">
+            <div class="coin-name"><strong>TRON</strong> <span class="ticker">TRX</span></div>
+            <a href="https://www.binance.com/uk-UA/trade/TRX_USDT" target="_blank">
+                <button class="buy-btn">Покупка</button>
+            </a>
+            <span id="trx-price" class="price-val">Завантаження...</span>
+            <span id="trx-change" class="percent-val">0.00%</span>
+        </div>
+
+        <div class="coin-row">
+            <span class="star">★</span>
+            <img src="https://assets.coingecko.com/coins/images/34305/small/notcoin.png" alt="NOT" class="coin-icon">
+            <div class="coin-name"><strong>Notcoin</strong> <span class="ticker">NOT</span></div>
+            <a href="https://www.binance.com/uk-UA/trade/NOT_USDT" target="_blank">
+                <button class="buy-btn">Покупка</button>
+            </a>
+            <span id="not-price" class="price-val">Завантаження...</span>
+            <span id="not-change" class="percent-val">0.00%</span>
+        </div>
+    </div>
+
+    <div class="chart-section">
+        <div id="tradingview_chart"></div>
+    </div>
+</div>
+
+<!-- ===== ІНФО-БЛОК З ВКЛАДКАМИ ===== -->
+<div class="info-section">
+    <div class="tabs-header">
+        <button class="tab-btn active" onclick="switchTab('facts', this)">💡 Цікаві факти</button>
+        <button class="tab-btn" onclick="switchTab('traps', this)">⚠️ Як не попастись</button>
+        <button class="tab-btn" onclick="switchTab('tips', this)">✅ Поради</button>
+        <button class="tab-btn" onclick="switchTab('glossary', this)">📖 Словник</button>
+    </div>
+
+    <div class="panel-box">
+
+        <div id="tab-facts" class="tab-panel active">
+            <div class="info-cards-row">
+                <div class="info-card">
+                    <div class="info-card-num">01</div>
+                    <div class="info-card-title">Анонімний творець</div>
+                    <div class="info-card-text">Сатоші Накамото — творець Bitcoin — досі невідомий. На його гаманці лежить близько <strong>1 млн BTC</strong>, яких він ніколи не торкнувся.</div>
+                </div>
+                <div class="info-card">
+                    <div class="info-card-num">02</div>
+                    <div class="info-card-title">Піца за мільярди</div>
+                    <div class="info-card-text">У 2010 р. програміст купив дві піци за <strong>10 000 BTC</strong>. Щороку 22 травня криптоспільнота відзначає "Bitcoin Pizza Day".</div>
+                </div>
+                <div class="info-card">
+                    <div class="info-card-num">03</div>
+                    <div class="info-card-title">Геній у 19 років</div>
+                    <div class="info-card-text">Ethereum придумав Віталік Бутерін у <strong>19 років</strong>. Whitepaper він надіслав друзям у 2013-му, а вже через рік запустив проєкт.</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="tab-traps" class="tab-panel">
+            <div class="info-cards-row">
+                <div class="info-card danger">
+                    <div class="info-card-badge">СКАМ</div>
+                    <div class="info-card-title">Pump &amp; Dump</div>
+                    <div class="info-card-text">Штучно "накачують" ціну невідомої монети у Telegram, потім скидають. Решта інвесторів залишаються ні з чим.</div>
+                </div>
+                <div class="info-card danger">
+                    <div class="info-card-badge">СКАМ</div>
+                    <div class="info-card-title">Фейкові біржі</div>
+                    <div class="info-card-text">Сайти-підробки під Binance або MetaMask крадуть паролі і seed-фрази. Завжди перевіряй URL і користуйся лише офіційними посиланнями.</div>
+                </div>
+                <div class="info-card danger">
+                    <div class="info-card-badge">СКАМ</div>
+                    <div class="info-card-title">Rug Pull</div>
+                    <div class="info-card-text">Творці нового токена збирають гроші, потім зникають, видаляючи ліквідність. Дуже поширено серед мем-коїнів на Solana.</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="tab-tips" class="tab-panel">
+            <div class="info-cards-row">
+                <div class="info-card tip">
+                    <div class="info-card-badge tip">ПОРАДА</div>
+                    <div class="info-card-title">Зберігай seed офлайн</div>
+                    <div class="info-card-text">Запиши seed-фразу на папір, ніколи не фотографуй і не зберігай у хмарі. Хто знає фразу — той справжній власник гаманця.</div>
+                </div>
+                <div class="info-card tip">
+                    <div class="info-card-badge tip">ПОРАДА</div>
+                    <div class="info-card-title">DYOR</div>
+                    <div class="info-card-text">Перед інвестицією вивчи проєкт самостійно: хто команда, який whitepaper, яка реальна технологія стоїть за монетою.</div>
+                </div>
+                <div class="info-card tip">
+                    <div class="info-card-badge tip">ПОРАДА</div>
+                    <div class="info-card-title">Не ризикуй більше ніж можеш</div>
+                    <div class="info-card-text">Крипторинок дуже волатильний. Bitcoin падав на <strong>80%</strong> від піку. Ніколи не вкладай останні або позикові гроші.</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="tab-glossary" class="tab-panel">
+            <div class="info-cards-row">
+                <div class="info-card">
+                    <div class="info-card-title">HODL</div>
+                    <div class="info-card-text">Тримати монету довгостроково, не продаючи навіть під час падіння ринку. Походить від помилки у написанні "hold".</div>
+                </div>
+                <div class="info-card">
+                    <div class="info-card-title">Whale 🐋</div>
+                    <div class="info-card-text">"Кит" — інвестор з дуже великим капіталом, який може рухати весь ринок своїми угодами купівлі або продажу.</div>
+                </div>
+                <div class="info-card">
+                    <div class="info-card-title">Bull / Bear market</div>
+                    <div class="info-card-text"><strong>Bull</strong> — бичачий ринок, ціни ростуть. <strong>Bear</strong> — ведмежий, ціни падають. Основні фази крипторинку.</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- ===== КІНЕЦЬ ІНФО-БЛОКУ ===== -->
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+    <script type="text/javascript">
+        new TradingView.widget({
+            "width": "100%",
+            "height": 480,
+            "symbol": "BINANCE:BTCUSDT",
+            "interval": "60",
+            "timezone": "Etc/UTC",
+            "theme": "dark",
+            "style": "1",
+            "locale": "uk",
+            "toolbar_bg": "#f1f3f6",
+            "enable_publishing": false,
+            "hide_side_toolbar": false,
+            "allow_symbol_change": true,
+            "container_id": "tradingview_chart"
+        });
+    </script>
+    <script src="script.js"></script>
+    <script>
+        function switchTab(id, btn) {
+            document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById('tab-' + id).classList.add('active');
+            btn.classList.add('active');
+        }
+    </script>
+</body>
 </html>
